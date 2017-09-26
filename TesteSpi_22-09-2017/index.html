@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>			
+		<script type="text/javascript" src="script.js"></script> 					
+		<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>		
+		<header>		
+			<h1>Teste para entrevista 
+				<a href="http://www.spi-integradora.com.br/" target="blank">SPI Integradora</a> :
+			</h1>					
+		</header>	
+		<div class="conteudo">	
+			<div class="form-group conteudo">					
+				<label for="caixa">Pegue aqui o componente :</label>
+				<textarea id="caixa" placeholder="Arraste-me" class="form-control text" 
+					draggable="true" ondragstart="drag(event)">					
+				</textarea>	
+			</div>
+			<label for="recebe">Arraste para cá :</label>
+			<div class="form-group conteudo-container" id="recebe" ondrop="drop(event)" ondragover="allowDrop(event)">
+    			
+  			</div>													
+			<br/>
+			<div style="text-align: left; margin-left: 10px;">
+				<div class="form-group">
+					<label for="">Selecione a caixa de texto :</label>&nbsp;&nbsp;&nbsp;
+					<select id="caixaNumber">
+						<option value="1">1</option>					
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>				
+				</div>		
+				<div class="form-group">
+					<label for="">Escolha cor da caixa :</label>&nbsp;&nbsp;&nbsp;<input type="color" id="corCx" value="#0000ff"/>					
+				</div>	
+				<div class="form-group">
+					<label for="">Escolha cor da fonte :</label>&nbsp;&nbsp;&nbsp;<input type="color" id="corFont" value="#0000ff"/>	
+				</div>
+				<div class="form-group">
+					<label for="">Escolha tamanho da fonte :</label>&nbsp;&nbsp;&nbsp;<input type="number" 
+					id="sizeFont" value="#0000ff"/>	
+				</div>		
+				<div class="btn btn-primary" onclick="alterar()">Alterar</div>
+			</div>	
+			<div class="btn btn-primary" onclick="salvar()">Salvar</div>	
+		</div>		
+					
+	</body>
+</html>

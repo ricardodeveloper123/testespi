@@ -1,0 +1,20 @@
+
+exibir();
+
+function exibir(){
+	var objSalvo = JSON.parse(localStorage.getItem('teste'));
+	$('#recebe').html('');	
+	for(var i=0; i<objSalvo.length; i++){
+		$('#recebe').append('<textarea id='+i+'></textarea>');
+		if(objSalvo[i]!=null){
+			document.getElementById(i).style.width = objSalvo[i].width;
+			document.getElementById(i).style.height = objSalvo[i].height;
+			document.getElementById(i).style.backgroundColor=objSalvo[i].corCx;
+			document.getElementById(i).style.color=objSalvo[i].corTxt;
+			document.getElementById(i).style.fontSize=objSalvo[i].fontSize+'pt';
+			document.getElementById(i).value=objSalvo[i].txt;
+			document.getElementById(i).style.resize='none';
+			document.getElementById(i).disabled = 'true';
+		}
+	}		
+}
